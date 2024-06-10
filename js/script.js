@@ -160,12 +160,12 @@ document.getElementById('toggleSidebar').addEventListener('click', function() {
     let sidebar = document.getElementById('sidebar');
     let toggle = document.getElementById('toggleSidebar');
     if (sidebarOpen) {
-        sidebar.style.right = '-300px';
-        toggle.style.right = '0';
+        sidebar.style.right = '-320px';
+        toggle.style.right = '0px';
         toggle.innerHTML = '>';
     } else {
         sidebar.style.right = '0';
-        toggle.style.right = '300px';
+        toggle.style.right = '320px';
         toggle.innerHTML = '<';
     }
     sidebarOpen = !sidebarOpen;
