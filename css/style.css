@@ -25,7 +25,7 @@ body, html {
     background-color: #f9f9f9;
     display: none;
     padding: 10px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     transition: right 0.3s ease;
 }
@@ -33,19 +33,28 @@ body, html {
 #returnButton {
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 50px;
     z-index: 1001;
     display: none;
+    padding: 6px;
+    border-radius: 25px;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+#returnButton:hover {
+    background-color: rgb(165, 166, 238);
 }
 
 #toggleSidebar {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: -20px;
     width: 20px;
     height: 40px;
-    background-color: rgb(225, 215, 206);
+    background-color: #FCFCFC;
     border: 1px solid #aaa;
+    border-radius: 10px 0px 0px 10px;
     text-align: center;
     line-height: 40px;
     cursor: pointer;
@@ -55,7 +64,7 @@ body, html {
 }
 
 #toggleSidebar:hover {
-    background-color: rgb(210, 181, 156);
+    background-color: rgb(165, 166, 238);
 }
 
 .artwork-item {
@@ -63,11 +72,11 @@ body, html {
 }
 
 .artist-name {
-    font-family: Arial, sans-serif;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 24px;
-    font-weight: bold;
     margin-bottom: 15px;
-    text-align: center;
 }
 
 .artwork-item {
@@ -76,8 +85,8 @@ body, html {
 
 .artwork-title {
     font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    font-weight: 400;
+    font-style: italic;
     font-size: 20px;
     margin-bottom: 5px;
 }
