@@ -120,14 +120,6 @@ body, html {
     margin: auto;
 }
 
-#titleModal span {
-    margin: 0;
-}
-
-#titleModal span:first-child {
-    margin-left: 10px;
-}
-
 .modal {
     display: none;
     position: fixed;
@@ -184,6 +176,13 @@ body, html {
     background-color: rgba(118, 119, 210, 0.725);
 }
 
+#logoModal {
+    max-width: 131px;
+    height: 33px;
+    align-self: center;
+    margin-left: 10px;
+    }
+
 .legend {
     padding: 10px;
     background: white;
@@ -202,3 +201,9 @@ body, html {
     border-radius: 50%;
 }
 
+#logoLegend {
+    display: block;
+    max-width: 100px;
+    height: auto;
+    margin: 0 auto 10px auto;
+}

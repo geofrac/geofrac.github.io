@@ -78,13 +78,13 @@ function displayMarkersForFrac(frac_id) {
 
     associatedLinks.forEach(artist_id => {
         if (!placesData[artist_id]) {
-            return; // Skip this artist_id if no corresponding place data is found
+            return;
         }
 
         addMarkerForId(artist_id);
         let start = [placesData[frac_id].lat, placesData[frac_id].lng];
         let end = [placesData[artist_id].lat, placesData[artist_id].lng];
-        let polyline = L.polyline([start, end], { color: '#000000', weight: 5, opacity: 0.2 }).addTo(map);
+        let polyline = L.polyline([start, end], { color: '#71A0EE', weight: 2, opacity: 0.4 }).addTo(map);
         polylines.push(polyline);
     });
 
@@ -92,7 +92,7 @@ function displayMarkersForFrac(frac_id) {
 }
 
 document.getElementById('returnButton').addEventListener('click', function() {
-    console.log('Return button clicked'); // Debugging statement
+    console.log('Return button clicked');
     resetMap();
 });
 
@@ -194,6 +194,7 @@ const legend = L.control({ position: 'bottomleft' });
 legend.onAdd = function (map) {
     const div = L.DomUtil.create('div', 'legend');
     div.innerHTML = `
+        <img id="logoLegend" src="images/01_logo.png" alt="GEOFrac">
         <i style="background: #7678ED;"></i> FRAC<br>
         <i style="background: #3D348B;"></i> Graphisme<br>
         <i style="background: #F35B04;"></i> Ouvrage<br>
@@ -204,6 +205,7 @@ legend.onAdd = function (map) {
 };
 
 legend.addTo(map);
+
 
 fetchData().then(function(files) {
     const places = files[0];
